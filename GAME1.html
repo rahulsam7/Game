@@ -1,0 +1,65 @@
+<Doctype <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>How Many Fingers</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+</head>
+
+        <link rel="stylesheet" type="text/css" href="game.css">
+        
+      
+<body>
+
+    <div class="game">
+    <p>How many finger am I holding up?</p>
+
+    <input id="GuessInput"type="number" placeholder="enter number here"></input> 
+    <br><br>
+    <button id="button">Guess!</button>
+
+    <div id="answer"></div>
+    
+    </div>
+
+    <script>
+            
+        document.getElementById("button").onclick = function() {
+
+        
+
+        var guessedNumber = Math.random();
+
+            guessedNumber = guessedNumber*6;
+
+            guessedNumber = Math.floor(guessedNumber);
+
+        if (document.getElementById("GuessInput").value == guessedNumber) {
+
+        document.getElementById("answer").innerHTML= 
+            
+            "Correct Guess " + guessedNumber;
+
+        }
+
+        else
+        {
+            document.getElementById("answer").innerHTML= 
+            
+            "Opps! Try Again " + guessedNumber;
+            
+
+
+            
+        }
+
+        }
+
+    
+    </script>
+
+</body>
+</html>
